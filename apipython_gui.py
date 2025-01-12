@@ -33,7 +33,7 @@ def search_weather():
         messagebox.showwarning("Erro de entrada", "Por favor, insira o nome de uma cidade.")
         return
 
-    api_key = "106e557aa58df1a15a881e80f8792550"  # Substitua pela sua chave da API do OpenWeather
+    api_key = "*********************"  # Substitua pela sua chave da API do OpenWeather
     weather_data = get_weather_data(city_name, api_key)
 
     if weather_data:
