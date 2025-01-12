@@ -28,7 +28,7 @@ def display_weather(data):
 
 def main():
     print("Bem vindo a Consulta do Tempo")
-    api_key = "106e557aa58df1a15a881e80f8792550"  # Replace with your OpenWeather API key
+    api_key = "*************"  # Replace with your OpenWeather API key
 
     while True:
         city_name = input("\nDigite o nome da cidade (ou digite 'exit' para sair): ").strip()
