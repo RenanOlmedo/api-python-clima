@@ -45,22 +45,28 @@ def search_weather():
 # Cria a janela GUI
 app = tk.Tk()
 app.title("Aplicativo de Clima")
-app.geometry("400x300")
+app.geometry("400x400")
+app.config(bg="#f0f8ff")  # Cor de fundo suave
 
 # Rótulo e entrada para o nome da cidade
-city_label = tk.Label(app, text="Insira o nome da cidade:")
-city_label.pack(pady=5)
+city_label = tk.Label(app, text="Insira o nome da cidade:", font=("Arial", 12), bg="#f0f8ff")
+city_label.pack(pady=10)
 
-city_entry = tk.Entry(app, width=30)
+city_entry = tk.Entry(app, width=30, font=("Arial", 14), borderwidth=2, relief="solid", bd=3)
 city_entry.pack(pady=5)
 
 # Botão de pesquisa
-search_button = tk.Button(app, text="Pesquisar Clima", command=search_weather)
+search_button = tk.Button(app, text="Pesquisar Clima", command=search_weather, font=("Arial", 12, "bold"),
+                          bg="#4CAF50", fg="white", relief="raised", bd=3)
 search_button.pack(pady=10)
 
-# Rótulo para exibição dos resultados
-result_label = tk.Label(app, text="", justify="left", wraplength=350)
-result_label.pack(pady=10)
+# Caixa de resultado com fundo diferente
+result_frame = tk.Frame(app, bg="#e0f7fa", bd=2, relief="solid", padx=10, pady=10)  
+result_frame.pack(pady=10, fill="both", expand=True)
+
+result_label = tk.Label(result_frame, text="", justify="left", wraplength=350, font=("Arial", 20),  
+                        bg="#e0f7fa", fg="#333333")
+result_label.pack()
 
 # Executa o loop de eventos da GUI
 app.mainloop()
